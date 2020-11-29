@@ -1,15 +1,16 @@
 package com.yzz.exam.springboot.domain.posts;
 
+import com.yzz.exam.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-@Getter
-@NoArgsConstructor
 @Entity
-public class Posts {
+@NoArgsConstructor
+@Getter
+public class Posts extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
